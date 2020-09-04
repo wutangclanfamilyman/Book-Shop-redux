@@ -1,9 +1,9 @@
 import React from 'react';
 import BooksList from '../books-list';
 
-const Main = () => {
+const MainPage = () => {
     return (
         <BooksList/>
     )
 }
-export default Main;
+export default MainPage;

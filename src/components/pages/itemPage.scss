@@ -1,0 +1,45 @@
+.item-page {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 20px 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #fff;
+}
+.item-page__image {
+    padding: 10px 40px;
+    width: 30%;
+    flex: 0 0 30%;
+}
+.item-page__content {
+    width: 60%;
+    flex: 0 0 60%;
+}
+.item-page__title {
+    padding-top: 30px;
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.item-page__descr,
+.item-page__pages,
+.item-page__price,
+.item-page__author {
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 700;
+    span {
+        font-weight: normal;
+        font-size: 20px;
+    }
+}
+.item-page__controls {
+    display: flex;
+    padding: 10px 0;
+    justify-content: left;
+    .btn-buy {
+        margin-left: 20px;
+    }
+}

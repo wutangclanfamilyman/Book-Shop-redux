@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import BooksItem from '../books-item';
 import {connect} from 'react-redux';
 import WithBooksService from '../hoc';
-import {booksLoaded, booksRequested, booksError} from '../../actions';
+import {booksLoaded, booksRequested, booksError, addBookToCart} from '../../actions';
 import Spinner from '../spinner';
 import Error from '../error';
 import './books-list.scss';
@@ -20,7 +20,7 @@ class BooksList extends Component {
 
     render() {
 
-        const {booksItems, loading, error} = this.props;
+        const {booksItems, loading, error, addBookToCart} = this.props;
 
         if(loading) {
             return <Spinner/>
@@ -30,7 +30,7 @@ class BooksList extends Component {
         }
 
         const items = booksItems.map(bookItem => {
-            return <BooksItem key={bookItem.id} booksItem={bookItem} />
+            return <BooksItem key={bookItem.id} onAddedToCart={() => {addBookToCart(bookItem.id)}} booksItem={bookItem} />
         });
 
         return (
@@ -50,7 +50,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps =  {
     booksLoaded,
     booksRequested,
-    booksError
+    booksError,
+    addBookToCart
 };
 
 const View = ({items}) => {

@@ -36,17 +36,20 @@
     justify-content: space-between;
 }
 .btn-details {
-    width: 100px;
     background: #000;
     padding: 10px 12px;
     color: #fff;
     text-decoration: none;
+    text-transform: uppercase;
     cursor: pointer;
+    font-size: 18px;
 }
 .btn-buy {
     width: 100px;
     background: green;
     padding: 10px 12px;
+    font-size: 18px;
+    text-transform: uppercase;
     cursor: pointer;
     color: #fff;
     border: none;

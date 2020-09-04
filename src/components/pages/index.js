@@ -1,9 +1,9 @@
-import Cart from './cart';
-import Main from './main';
+import CartPage from './cartPage';
+import MainPage from './mainPage';
 import ItemPage from './itemPage';
 
 export {
-    Cart,
-    Main,
+    CartPage,
+    MainPage,
     ItemPage
 }
